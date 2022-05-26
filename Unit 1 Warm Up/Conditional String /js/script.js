@@ -47,15 +47,15 @@ console.log(flower);
       // If the object.property exists, concatenate to the above string variable something like the following string and value
         // '<p>An experience level of ' + myChar.experience + '</p>'
       // Repeat this process for all five possible character states
-  if (Object.property){
-
+  if (experience.property){
+    message = '<p>An experience level of ' + myChar.experience + '</p>'
   } else {
 
 
   }
 
   // 5) Finally, set the innerHTML of the `statString` variable above equal to your conditional string variable
-
+statString.innerHTML = flower; 
 
   // Helpful log statement to test function - You can comment this out if you like
   console.log('Print button is functional!');
