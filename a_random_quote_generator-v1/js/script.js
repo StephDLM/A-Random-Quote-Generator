@@ -38,7 +38,6 @@ let quotes = [
   year: 2015
 }
 
-
 ];
 
 
@@ -46,7 +45,20 @@ let quotes = [
 /***
  * `getRandomQuote` function
 ***/
+//the function should return a random quote object using the random number variable above and bracket notation on the quotes array
+function getRandomQuote (array){
+   let quoteNumbers = Math.floor(Math.random() * quotes.length); 
+   for (let i = 0; i<quotes.length; i++){
+    let displayQuotes = array[quoteNumbers];
+    return displayQuotes
+    console.log()
+  };
 
+};
+// html += `
+// <h2>${quotes.quote}</h2>
+// <h3>${quotes.source}</h3>
+// <p>Age: ${pet.age}</p>`
 
 
 /***

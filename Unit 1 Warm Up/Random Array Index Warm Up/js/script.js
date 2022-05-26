@@ -28,8 +28,8 @@ const twelveSidedDie = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 
   // 2b) `return` the random number variable
   function diceRoll (array){
-    let randomeInput = Math.floor(Math.random() * array.length );
-    return randomIput
+    let randomInput = Math.floor(Math.random() * array.length );
+    return randomInput
 
   };
 
@@ -46,18 +46,18 @@ playBtn.addEventListener('click', () => {
   // 4) Create two variables to store player one and player two scores
     // 4a) Set both variables equal to a call to the `diceRoll` function - Arguments: twelveSidedDie
 
-    let ScorePlayerOne = diceRoll(twelveSidedDie);
-    let ScorePlayerTwo = diceRoll(twelveSidedDie);
+    let scorePlayerOne = diceRoll(twelveSidedDie);
+    let scorePlayerTwo = diceRoll(twelveSidedDie);
      
 
 
   // 5) Log out the two variables above to test their values — check them out in the console
-console.log(scoreOnePlayerOne);
-console.log(ScoreTwoPlayerTwo);
+console.log(scorePlayerOne);
+console.log(scorePlayerTwo);
 
   // 6) Set the innerHTML of the `scoreOneElement` and `scoreTwoElement` variables above equal to the dice roll variables you just created
-  scoreOneElement.innerHTML = scoreOne; 
-  scoreTwoElement.innerHTML = scoreTwo;
+  scoreOneElement.innerHTML = scorePlayerOne; 
+  scoreTwoElement.innerHTML = scorePlayerTwo;
 
   // Helpful log statement to test function — You can comment out this if you like
   console.log('Play button is functional!');
