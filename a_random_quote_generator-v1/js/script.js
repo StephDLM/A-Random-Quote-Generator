@@ -48,24 +48,31 @@ let quotes = [
 //the function should return a random quote object using the random number variable above and bracket notation on the quotes array
 function getRandomQuote (array){
    let quoteNumbers = Math.floor(Math.random() * quotes.length); 
-   for (let i = 0; i<quotes.length; i++){
     let displayQuotes = array[quoteNumbers];
+    console.log(displayQuotes)
     return displayQuotes
-    console.log()
-  };
-
 };
-// html += `
-// <h2>${quotes.quote}</h2>
-// <h3>${quotes.source}</h3>
-// <p>Age: ${pet.age}</p>`
+
+getRandomQuote(quotes);
+//for (let i = 0; i<quotes.length; i++){}
 
 
 /***
  * `printQuote` function
 ***/
+function printQuote(){
+  let randomQuotes = getRandomQuote;
+    html += 
+      <p class="quote"> `${quotes.quote}` </p>
+      <p class="source"> `${quotes.source}` </p>
 
 
+};
+
+// <h2>${quotes.quote}</h2>
+//    <h3>${quotes.source}</h3>
+//     <p>${quotes.citation}</p>
+//     <p>${quotes.year}</p>`
 
 /***
  * click event listener for the print quote button
