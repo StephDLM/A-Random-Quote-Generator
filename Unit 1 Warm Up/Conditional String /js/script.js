@@ -30,15 +30,17 @@ print.addEventListener('click', () => {
   // YOUR CODE GOES HERE!!! Do the steps below to complete this challenge
 
   // 1) Use `var` or `let` to create a variable and set it equal to an empty string
- 
+ let message = '';
+
 
   // 2) Concatenate to the above string variable the following string and value
       // '<p>My ' + myChar.icon + 'character has:</p>'
-      let flower = '<p>My ' + myChar.icon + 'character has:</p>';
-console.log(flower);
+      message += '<p>My ' + myChar.icon + 'character has:</p>';
+
   
   // 3) `console.log()` the above string variable to check its value in the console
       // Additionally, you can complete step 5 of these instructions now to see the results of your string variable printed to the page in the browser when you click the print button
+      console.log(message);
 
   // 4) Use simple `if` statements to conditionally concatenate strings for your characters stats.
       // Your character will have three of five possible stats — 'experience', 'strength', 'wisdom', 'endurance', 'charisma'
@@ -47,15 +49,26 @@ console.log(flower);
       // If the object.property exists, concatenate to the above string variable something like the following string and value
         // '<p>An experience level of ' + myChar.experience + '</p>'
       // Repeat this process for all five possible character states
-  if (experience.property){
-    message = '<p>An experience level of ' + myChar.experience + '</p>'
-  } else {
-
-
+  if (myChar.experience){
+    message += '<p>An experience level of ' + myChar.experience + '</p>'
+  } 
+  if (myChar.strength){
+    message += '<p>An experience level of ' + myChar.strength + '</p>'
+  }
+  if (myChar.wisdom){
+    message += '<p>An experience level of ' + myChar.wisdom + '</p>'
+  }
+  if (myChar.endurance){
+    message += '<p>An experience level of ' + myChar.endurance + '</p>'
+  }
+  if (myChar.charisma){
+    message += '<p>An experience level of ' + myChar.charisma + '</p>'
   }
 
+  
+
   // 5) Finally, set the innerHTML of the `statString` variable above equal to your conditional string variable
-statString.innerHTML = flower; 
+statString.innerHTML = message; 
 
   // Helpful log statement to test function - You can comment this out if you like
   console.log('Print button is functional!');
