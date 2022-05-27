@@ -40,14 +40,12 @@ let quotes = [
 
 //create a variable to store a random number from 0 to number of objects in array
 function getRandomQuote (array){
-   let quoteNumbers = Math.floor(Math.random() * quotes.length); 
+   let quoteNumbers = Math.floor(Math.random() * array.length); 
     let displayQuotes = array[quoteNumbers];
     console.log(displayQuotes)
     return displayQuotes
 };
 
-//call the function 
-getRandomQuote(quotes);
 
 
 
@@ -80,7 +78,6 @@ function printQuote(){
 
 
 /***
- * click event listener for the print quote button
  * DO NOT CHANGE THE CODE BELOW!!
 ***/
 
