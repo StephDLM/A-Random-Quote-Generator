@@ -4,7 +4,7 @@ project 1 - A Random Quote Generator
 ******************************************/
 
 
-//Make an array named quotes
+//Make an array of objects that include quotes, year (if possible), and citation (if possible)
 let quotes = [
 { 
   quote: 'Do your best until you know better. Then when you know better, do better',
@@ -37,10 +37,8 @@ let quotes = [
 
 
 
-/***
- * `getRandomQuote` function
-***/
-//create a variable to store a random number ranging from zero to the index of the last item in the quotes array.
+
+//create a variable to store a random number from 0 to number of objects in array
 function getRandomQuote (array){
    let quoteNumbers = Math.floor(Math.random() * quotes.length); 
     let displayQuotes = array[quoteNumbers];
@@ -48,28 +46,33 @@ function getRandomQuote (array){
     return displayQuotes
 };
 
+//call the function 
 getRandomQuote(quotes);
 
 
 
-/***
- * `printQuote` function
-***/
+/*
+Create a function that uses the getRandomQuote function to returns 
+an HTML string with randomized quotes. 
+Create a variable to store the random quotes objects.
+Create an HTML string to generate quotes, and use if statements to include the year and citations when they are  included in an object.
+*/
 function printQuote(){
   let randomQuote = getRandomQuote(quotes);
     let html = '';  
     html += 
-      `<p class="quote"> ${randomQuote.quote}</p>
-       <p class="source">${randomQuote.source}` 
+      `<p class='quote'> ${randomQuote.quote}</p>
+       <p class='source'>${randomQuote.source}` 
 
       if (randomQuote.citation){
-       html += `<span class="citation">${randomQuote.citation}</span>`
+       html += `<span class='citation'>${randomQuote.citation}</span>`
       };
       if (randomQuote.year){
-       html += `<span class="year">${randomQuote.year}</span>`
+       html += `<span class='year'>${randomQuote.year}</span>`
       };
 
      html += '</p>'
+//return the HTML string displaying the random quote when clicking the quote box
      document.getElementById('quote-box').innerHTML = html; 
  
 };
